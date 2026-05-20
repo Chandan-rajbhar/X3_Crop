@@ -23,9 +23,17 @@ export function FadeIn({
   );
 }
 
-export function PageHero({ title, subtitle, image }: { title: string; subtitle: string; image: string }) {
+export function PageHero({
+  title,
+  subtitle,
+  image,
+}: {
+  title: string;
+  subtitle: string;
+  image: string;
+}) {
   return (
-    <section className="relative h-[50vh] min-h-[360px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[50vh] min-h-90 flex items-center justify-center overflow-hidden">
       <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
       <motion.div

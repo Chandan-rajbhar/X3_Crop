@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
-import logo from "../../public/images/Header_img/logo.png"
+import logo from "../../public/images/HomePage _img/logo.png"
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
