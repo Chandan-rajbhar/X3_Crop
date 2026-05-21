@@ -141,13 +141,17 @@ function Home() {
 
       <section className="mx-auto max-w-7xl px-6 pb-24 font-sans mt-10  ">
         <div className="relative">
-          {/* Top Floating Tab Badge */}
-          <div className="absolute top-0 translate-y-[-95%] bg-[#FFFFFF] px-6 py-2 rounded-t-2xl z-10 border-t border-x border-gray-100">
-            <span className="text-red-500 font-medium text-sm md:text-base">About us</span>
-          </div>
-
           {/* Main Content Card Container */}
-          <div className="relative bg-[#b61616] rounded-3xl rounded-br-[120px] rounded-tl-[50px] p-12  md:p-20 text-slate-900 min-h-70 flex items-center justify-center">
+          <div className="relative bg-[#F5F5F5] rounded-[20px] sm:rounded-[5px] rounded-tl-[10px] sm:rounded-tl-[10px] rounded-br-[10px] sm:rounded-br-[20px] p-1 md:p-20 text-slate-900 min-h-70 flex items-center justify-center">
+            {/* Top Left Logo Card */}
+            <div className="absolute top-0 left-0 bg-white rounded-br-[120px] sm:rounded-br-[20px] p-1">
+              <div className="rounded-full px-3 py-1 shadow-md flex items-center justify-center">
+                <span className="text-red-500 font-semibold text-xs sm:text-sm whitespace-nowrap">
+                  About us
+                </span>
+              </div>
+            </div>
+
             {/* Main Typography content */}
             <div className="max-w-3xl text-center">
               <p className="text-base md:text-xl font-medium leading-relaxed tracking-wide text-neutral-800">
@@ -157,13 +161,12 @@ function Home() {
               </p>
             </div>
 
-            {/* Bottom Right Corner Action Button */}
-            <Link
-              to="/contact"
-              className="absolute right-2 md:bottom-1 md: bg-black text-white p-4 rounded-tl-[120px] rounded-2xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group"
-            >
-              <FaArrowUp className="w-5 h-5 rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
+            {/* Bottom Right Round Action Button */}
+            <div className="absolute bottom-0 right-0 w-14 h-14 sm:w-18 sm:h-18 bg-white rounded-tl-[35px] flex items-end justify-end p-0.5">
+              <button className="bg-black text-white p-2.5 rounded-xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group flex items-center justify-center">
+                <FaArrowUp className="w-7 h-7 rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </button>
+            </div>
           </div>
         </div>
       </section>
