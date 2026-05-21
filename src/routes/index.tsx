@@ -25,6 +25,7 @@ import ParallelInfrastructur from "../../public/images/logos_img/Parallel-Infras
 
 import HospitalityGaming_img from "../../public/images/HospitalityGaming_img/Hospitality.png";
 import EmilyFoster from "../../public/images/HospitalityGaming_img/EmilyFoster.jpg";
+import { FaSquarePlus } from "react-icons/fa6";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -141,7 +142,7 @@ const features_data = [
 ];
 
 function Home() {
-  const [openIndex, setOpenIndex] = useState<number | null>(1);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -300,7 +301,7 @@ function Home() {
           {constructionFeatures.map((f) => (
             <div
               key={f.title}
-              className={`relative flex flex-col justify-between p-8 pt-12 pb-6 rounded-[2rem] transition-all duration-300 ${
+              className={`relative flex flex-col justify-between p-8 pt-12 pb-6 rounded-md transition-all duration-300 ${
                 f.isHighlighted ? "bg-[#FF4E3A] text-white" : "bg-[#F5F5F5] text-neutral-900"
               }`}
             >
@@ -331,7 +332,7 @@ function Home() {
                   Learn more
                 </a>
 
-                <div className="w-12 h-12 absolute bottom-3 right-3 rounded-md flex items-center justify-center bg-black text-white transition-transform hover:scale-105">
+                <div className="w-12 h-12 absolute bottom-2 right-2 rounded-md flex items-center justify-center bg-black text-white transition-transform hover:scale-105">
                   <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
                 </div>
               </div>
@@ -356,7 +357,7 @@ function Home() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-[#111111] rounded-2xl overflow-hidden border border-white/5 hover:-translate-y-1 transition-all duration-300"
+                className="bg-[#111111] rounded-md overflow-hidden border border-white/5 hover:-translate-y-1 transition-all duration-300"
               >
                 {/* Image */}
                 <div className="p-3 pb-0">
@@ -394,6 +395,7 @@ function Home() {
           </div>
         </div>
       </section>
+
       <section className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 bg-white">
         <div className="rounded-[22px] sm:rounded-[28px] bg-[#efefef] px-4 sm:px-6 md:px-8 py-5 sm:py-6">
           <div className="flex flex-wrap items-center justify-center lg:justify-between gap-y-4">
@@ -463,10 +465,10 @@ function Home() {
                     <span>{item.title}</span>
                     <span
                       className={`flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold transition-transform ${
-                        isOpen ? "bg-black text-white" : "bg-black text-white"
+                        isOpen ? "" : ""
                       }`}
                     >
-                      {isOpen ? "✕" : "＋"}
+                      {isOpen ? "" : <FaSquarePlus size={30} />}
                     </span>
                   </button>
 
