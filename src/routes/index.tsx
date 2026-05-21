@@ -180,13 +180,13 @@ function Home() {
           {/* Right Image Section */}
           <div className="relative flex justify-center lg:justify-end w-full order-1 lg:order-2">
             {/* Main Wrapper */}
-            <div className="relative w-full max-w-[520px] p-2">
+            <div className="relative w-full max-w-130 p-2">
               {/* Main Image */}
               <div className="relative w-full rounded-[35px] sm:rounded-[45px] rounded-tl-[90px] sm:rounded-tl-[120px] rounded-br-[45px] sm:rounded-br-[60px] overflow-hidden">
                 <img
                   src={worker_img}
                   alt="Construction Team Working"
-                  className="w-full h-[350px] sm:h-[500px] md:h-[480px] object-cover"
+                  className="w-full h-87.5 sm:h-125 md:h-120 object-cover"
                 />
               </div>
 
@@ -202,7 +202,7 @@ function Home() {
               </div>
 
               {/* Bottom Right Arrow Button */}
-              <div className="absolute bottom-0 right-2 bottom-1 w-14 h-14 sm:w-18 sm:h-18 bg-white rounded-tl-[27px] flex items-end justify-end p-0.5">
+              <div className="absolute bottom-1 right-2 w-14 h-14 sm:w-18 sm:h-18 bg-white rounded-tl-[27px] flex items-end justify-end p-0.5">
                 <button className="bg-black text-white p-2.5 h-12 w-12 rounded-md hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group flex items-center justify-center">
                   <FaArrowUp className="rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
@@ -259,9 +259,9 @@ function Home() {
       <section className="mx-auto max-w-7xl px-6 pb-24 font-sans mt-6  ">
         <div className="relative">
           {/* Main Content Card Container */}
-          <div className="relative bg-[#F5F5F5] rounded-[20px] sm:rounded-[5px] rounded-tl-[10px] sm:rounded-tl-[10px] rounded-br-[10px] sm:rounded-br-[20px] p-1 md:p-20 text-slate-900 min-h-70 flex items-center justify-center">
+          <div className="relative bg-[#F5F5F5] rounded-4xl sm:rounded-[5px] rounded-tl-[10px] sm:rounded-tl-[10px] rounded-br-[10px] sm:rounded-br-4xl p-1 md:p-20 text-slate-900 min-h-70 flex items-center justify-center">
             {/* Top Left Logo Card */}
-            <div className="absolute top-0 left-0 bg-white rounded-br-[120px] sm:rounded-br-[20px] p-1">
+            <div className="absolute top-0 left-0 bg-white rounded-br-[120px] sm:rounded-br-4xl p-1">
               <div className="rounded-full px-3 py-1 shadow-md flex items-center justify-center">
                 <span className="text-red-500 font-semibold text-xs sm:text-sm whitespace-nowrap">
                   About us
@@ -331,7 +331,7 @@ function Home() {
                   Learn more
                 </a>
 
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-black text-white transition-transform hover:scale-105">
+                <div className="w-12 h-12 absolute bottom-3 right-3 rounded-md flex items-center justify-center bg-black text-white transition-transform hover:scale-105">
                   <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
                 </div>
               </div>
@@ -363,12 +363,12 @@ function Home() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-[230px] object-cover rounded-xl"
+                    className="w-full h-57.5 object-cover rounded-xl"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="p-4 flex flex-col justify-between min-h-[180px]">
+                <div className="p-4 flex flex-col justify-between min-h-45">
                   <div>
                     <h3 className="text-white text-2xl font-semibold mb-3">{project.title}</h3>
 
@@ -499,7 +499,7 @@ function Home() {
         {/* Main Testimonial Card */}
         <div className="bg-[#FFF2F2] rounded-[32px] p-6 md:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
           {/* Left: Project Image */}
-          <div className="lg:col-span-6 w-full h-full min-h-[240px] md:min-h-[320px] rounded-2xl overflow-hidden relative">
+          <div className="lg:col-span-6 w-full h-full min-h-60 md:min-h-80 rounded-2xl overflow-hidden relative">
             <img
               src={HospitalityGaming_img}
               alt="Modern office building architectural project"
@@ -560,7 +560,7 @@ function Home() {
             </p>
 
             {/* Map */}
-            <div className="border-[3px] border-[#FF3B30] rounded-[24px] sm:rounded-[32px] overflow-hidden p-1.5 h-[240px] sm:h-[300px] md:h-[320px] w-full max-w-full lg:max-w-lg shadow-sm">
+            <div className="border-3 border-[#FF3B30] rounded-2xl sm:rounded-3xl overflow-hidden p-1.5 h-60 sm:h-75 md:h-80 w-full max-w-full lg:max-w-lg shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d14008.183520497134!2d77.37223800000001!3d28.628387!3m2!1i1024!2i768!4f13.1!2m1!1snoida%20electronic%20city!5e0!3m2!1sen!2sin!4v1779356083535!5m2!1sen!2sin"
                 className="w-full h-full rounded-[24px] border-0"

@@ -30,7 +30,7 @@ function Products() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p, i) => (
             <FadeIn key={p.name} delay={i * 0.08}>
-              <div className="group rounded-2xl overflow-hidden bg-card border border-border hover:shadow-[var(--shadow-lift)] transition-all hover:-translate-y-1">
+              <div className="group rounded-2xl overflow-hidden bg-card border border-border hover:shadow-(--shadow-lift) transition-all hover:-translate-y-1">
                 <div className="aspect-square overflow-hidden">
                   <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
                 </div>
