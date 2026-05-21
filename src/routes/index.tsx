@@ -60,34 +60,34 @@ function Home() {
     <>
       <section className="relative bg-[#FFFFFF] min-h-[75vh] flex items-center overflow-hidden pt-8 pb-5 lg:pt-0">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-5 grid lg:grid-cols-2 gap-14 items-center">
-          {/* Right Image Section - Mobile First */}
+          {/* Right Image Section */}
           <div className="relative flex justify-center lg:justify-end w-full order-1 lg:order-2">
-            {/* Main Parent Frame Wrapper */}
-            <div className="relative w-full max-w-130 p-2 sm:p-4">
+            {/* Main Wrapper */}
+            <div className="relative w-full max-w-[520px] p-2">
               {/* Main Image */}
-              <div className="relative w-full rounded-[35px] sm:rounded-[45px] rounded-tl-[90px] sm:rounded-tl-[120px] rounded-br-[90px] sm:rounded-br-[110px] overflow-hidden">
+              <div className="relative w-full rounded-[35px] sm:rounded-[45px] rounded-tl-[90px] sm:rounded-tl-[120px] rounded-br-[45px] sm:rounded-br-[60px] overflow-hidden">
                 <img
                   src={worker_img}
                   alt="Construction Team Working"
-                  className="w-full h-87.5 sm:h-125 md:h-120 object-cover"
+                  className="w-full h-[350px] sm:h-[500px] md:h-[480px] object-cover"
                 />
               </div>
 
               {/* Top Left Logo Card */}
-              <div className="absolute top-0 left-0 w-24 h-24 sm:w-35 sm:h-35 bg-[#FFFFFF] rounded-br-[35px] sm:rounded-br-[45px] flex items-start justify-start p-2 sm:p-3">
-                <div className="w-full h-full bg-[#ff4b3e] rounded-4xl sm:rounded-[28px] flex items-center justify-center p-3 sm:p-4 shadow-md">
+              <div className="absolute top-0 left-0 w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-br-[40px] sm:rounded-br-[35px] flex items-start justify-start p-2">
+                <div className="w-full h-full bg-[#ff4b3e] rounded-[24px] flex items-center justify-center p-3 shadow-md">
                   <img
                     src={hero_img}
                     alt="X3 Logo"
-                    className="w-full h-full object-contain filter brightness-0 invert"
+                    className="w-full h-full object-contain brightness-0 invert"
                   />
                 </div>
               </div>
 
-              {/* Bottom Right Button */}
-              <div className="absolute bottom-0 right-0 w-20 h-20 sm:w-27.5 sm:h-27.5 bg-[#FFFFFF] sm:rounded-tl-[40px] flex items-end justify-end p-2 sm:p-3">
-                <button className="bg-black text-white p-4 rounded-2xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group flex items-center justify-center">
-                  <FaArrowUp className="w-5 h-5 rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              {/* Bottom Right Arrow Button */}
+              <div className="absolute bottom-0 right-0 w-14 h-14 sm:w-18 sm:h-18 bg-white rounded-tl-[27px] flex items-end justify-end p-0.5">
+                <button className="bg-black text-white p-2.5 rounded-xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group flex items-center justify-center">
+                  <FaArrowUp className="w-7 h-7 rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
               </div>
             </div>
@@ -138,7 +138,7 @@ function Home() {
           </div>
         </div>
       </section>
-      
+
       <section className="mx-auto max-w-7xl px-6 pb-24 font-sans mt-10  ">
         <div className="relative">
           {/* Top Floating Tab Badge */}
@@ -147,7 +147,7 @@ function Home() {
           </div>
 
           {/* Main Content Card Container */}
-          <div className="relative bg-[#f5f5f5] rounded-3xl p-12 md:p-20 text-slate-900 min-h-70 flex items-center justify-center">
+          <div className="relative bg-[#b61616] rounded-3xl rounded-br-[120px] rounded-tl-[50px] p-12  md:p-20 text-slate-900 min-h-70 flex items-center justify-center">
             {/* Main Typography content */}
             <div className="max-w-3xl text-center">
               <p className="text-base md:text-xl font-medium leading-relaxed tracking-wide text-neutral-800">
@@ -160,7 +160,7 @@ function Home() {
             {/* Bottom Right Corner Action Button */}
             <Link
               to="/contact"
-              className="absolute right-2 md:bottom-1 md: bg-black text-white p-4 rounded-2xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group"
+              className="absolute right-2 md:bottom-1 md: bg-black text-white p-4 rounded-tl-[120px] rounded-2xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group"
             >
               <FaArrowUp className="w-5 h-5 rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
