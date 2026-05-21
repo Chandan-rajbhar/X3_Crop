@@ -1,52 +1,141 @@
-import { Link } from "@tanstack/react-router";
-import { GiWheat } from "react-icons/gi";
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-
+import footer_img from "../../public/images/footer_img.png";
+import { FiGlobe, FiMapPin, FiPhone, FiYoutube } from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground mt-24">
-      <div className="mx-auto max-w-7xl px-6 py-16 grid gap-10 md:grid-cols-4">
-        <div>
-          <div className="flex items-center gap-2 font-bold text-xl">
-            <GiWheat className="text-2xl text-accent" />
-            X3 Crop
+  <footer className="mt-10 px-3 md:px-6">
+  <div className="relative bg-black text-white rounded-[28px] rounded-tl-[27px] overflow-visible">
+    {/* Main Content */}
+    <div className="px-6 md:px-10 py-10 md:py-12">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+        {/* Left Section */}
+        <div className="md:col-span-4 flex flex-col justify-between">
+          <div>
+            <img
+              src={footer_img}
+              alt="logo"
+              className="w-24 md:w-28 object-contain"
+            />
+
+            <p className="mt-6 text-[13px] leading-6 text-gray-300 max-w-[240px]">
+              Building the future with excellence
+              <br />
+              with Construction & Engineering.
+            </p>
           </div>
-          <p className="mt-4 text-sm text-primary-foreground/80 leading-relaxed">
-            Cultivating the future of agriculture through innovation, sustainability, and care for the land.
+
+          {/* Copyright */}
+          <p className="hidden md:block text-[11px] text-gray-500 mt-14">
+            Copyright © 2024 Elite Builders Inc. | All Rights Reserved
           </p>
         </div>
-        <div>
-          <h4 className="font-semibold mb-4">Company</h4>
-          <ul className="space-y-2 text-sm text-primary-foreground/80">
-            <li><Link to="/about" className="hover:text-accent">About</Link></li>
-            <li><Link to="/services" className="hover:text-accent">Services</Link></li>
-            <li><Link to="/products" className="hover:text-accent">Products</Link></li>
-            <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
-          </ul>
+
+        {/* Center Nav */}
+        <div className="md:col-span-4 flex md:justify-center">
+          <div className="flex flex-wrap gap-8 text-sm text-gray-300">
+            <a
+              href="/about"
+              className="hover:text-white transition-all duration-300"
+            >
+              About
+            </a>
+
+            <a
+              href="/services"
+              className="hover:text-white transition-all duration-300"
+            >
+              Services
+            </a>
+
+            <a
+              href="/careers"
+              className="hover:text-white transition-all duration-300"
+            >
+              Careers
+            </a>
+
+            <a
+              href="/contact"
+              className="hover:text-white transition-all duration-300"
+            >
+              Contact
+            </a>
+          </div>
         </div>
-        <div>
-          <h4 className="font-semibold mb-4">Contact</h4>
-          <ul className="space-y-2 text-sm text-primary-foreground/80">
-            <li>123 Farmland Road</li>
-            <li>Greenfield, CA 94203</li>
-            <li>hello@x3crop.com</li>
-            <li>+1 (555) 012-3456</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-4">Follow</h4>
-          <div className="flex gap-3">
-            {[FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center">
-                <Icon />
+
+        {/* Right Contact */}
+        <div className="md:col-span-4 md:ml-auto">
+          <h3 className="text-lg font-medium mb-5">Reach Us</h3>
+
+          <div className="space-y-4 text-sm text-gray-300">
+            {/* Address */}
+            <div className="flex items-start gap-3">
+              <div className="mt-1">
+                <FiMapPin className="text-gray-400 text-sm" />
+              </div>
+
+              <p className="leading-6">
+                1157 W. Mission Ave #460669
+                <br />
+                Escondido, CA 92046–7028
+              </p>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-center gap-3">
+              <FiPhone className="text-gray-400 text-sm" />
+              <p>Ph: (760) 658–6455</p>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-center gap-3">
+              <FiGlobe className="text-gray-400 text-sm" />
+
+              <a
+                href="mailto:info@x3corp.net"
+                className="hover:text-white underline underline-offset-4"
+              >
+                info@x3corp.net
               </a>
-            ))}
+            </div>
           </div>
         </div>
       </div>
-      <div className="border-t border-primary-foreground/10 py-6 text-center text-xs text-primary-foreground/60">
-        © {new Date().getFullYear()} X3 Crop. All rights reserved.
-      </div>
-    </footer>
+
+      {/* Mobile Copyright */}
+      <p className="md:hidden text-[11px] text-gray-500 mt-10">
+        Copyright © 2024 Elite Builders Inc. | All Rights Reserved
+      </p>
+    </div>
+
+    {/* Floating Social Box */}
+    <div className="absolute -bottom-0 right-0 bg-black px-4 py-2 rounded-2xl flex items-center gap-3 shadow-xl">
+      {/* YouTube */}
+      <a
+        href="#youtube"
+        className="w-9 h-9 rounded-xl bg-zinc-900 hover:bg-zinc-800 flex items-center justify-center transition-all duration-300"
+      >
+        <FiYoutube className="text-sm" />
+      </a>
+
+      {/* Instagram */}
+      <a
+        href="#instagram"
+        className="w-9 h-9 rounded-xl bg-zinc-900 hover:bg-zinc-800 flex items-center justify-center transition-all duration-300"
+      >
+        <FaInstagram className="text-sm" />
+      </a>
+
+      {/* X */}
+      <a
+        href="#x"
+        className="w-9 h-9 rounded-xl bg-zinc-900 hover:bg-zinc-800 flex items-center justify-center transition-all duration-300"
+      >
+        <FaXTwitter className="text-sm" />
+      </a>
+    </div>
+  </div>
+</footer>
   );
 }
