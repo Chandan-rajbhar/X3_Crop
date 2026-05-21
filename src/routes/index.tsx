@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { GiPlantSeed, GiFarmer, GiGreenhouse, GiWaterDrop } from "react-icons/gi";
-import { FaArrowRight, FaLeaf } from "react-icons/fa";
+import { FaArrowRight, FaArrowUp, FaLeaf } from "react-icons/fa";
 import heroField from "@/assets/hero-field.jpg";
 import cornImg from "@/assets/crops-corn.jpg";
 import harvestImg from "@/assets/harvest.jpg";
@@ -58,8 +58,8 @@ const stats = [
 function Home() {
   return (
     <>
-      <section className="relative bg-[#f5f5f5] min-h-[92vh] flex items-center overflow-hidden pt-8 pb-14 lg:pt-0">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+      <section className="relative bg-[#FFFFFF] min-h-[75vh] flex items-center overflow-hidden pt-8 pb-5 lg:pt-0">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-5 grid lg:grid-cols-2 gap-14 items-center">
           {/* Right Image Section - Mobile First */}
           <div className="relative flex justify-center lg:justify-end w-full order-1 lg:order-2">
             {/* Main Parent Frame Wrapper */}
@@ -74,7 +74,7 @@ function Home() {
               </div>
 
               {/* Top Left Logo Card */}
-              <div className="absolute top-0 left-0 w-24 h-24 sm:w-35 sm:h-35 bg-[#f5f5f5] rounded-br-[35px] sm:rounded-br-[45px] flex items-start justify-start p-2 sm:p-3">
+              <div className="absolute top-0 left-0 w-24 h-24 sm:w-35 sm:h-35 bg-[#FFFFFF] rounded-br-[35px] sm:rounded-br-[45px] flex items-start justify-start p-2 sm:p-3">
                 <div className="w-full h-full bg-[#ff4b3e] rounded-4xl sm:rounded-[28px] flex items-center justify-center p-3 sm:p-4 shadow-md">
                   <img
                     src={hero_img}
@@ -85,9 +85,9 @@ function Home() {
               </div>
 
               {/* Bottom Right Button */}
-              <div className="absolute bottom-0 right-0 w-20 h-20 sm:w-27.5 sm:h-27.5 bg-[#f5f5f5]  sm:rounded-tl-[40px] flex items-end justify-end p-2 sm:p-3">
-                <button className="bg-black hover:bg-[#ff4b3e] text-white w-full h-full rounded-3xl sm:rounded-4xl flex items-center justify-center transition-all duration-300 shadow-md group">
-                  <ArrowUpRight size={22} className="group-hover:rotate-45 transition-transform" />
+              <div className="absolute bottom-0 right-0 w-20 h-20 sm:w-27.5 sm:h-27.5 bg-[#FFFFFF] sm:rounded-tl-[40px] flex items-end justify-end p-2 sm:p-3">
+                <button className="bg-black text-white p-4 rounded-2xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group flex items-center justify-center">
+                  <FaArrowUp className="w-5 h-5 rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
               </div>
             </div>
@@ -135,6 +135,35 @@ function Home() {
                 <p className="text-gray-700 mt-2 text-sm">Sq Ft built</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      <section className="mx-auto max-w-7xl px-6 pb-24 font-sans mt-10  ">
+        <div className="relative">
+          {/* Top Floating Tab Badge */}
+          <div className="absolute top-0 translate-y-[-95%] bg-[#FFFFFF] px-6 py-2 rounded-t-2xl z-10 border-t border-x border-gray-100">
+            <span className="text-red-500 font-medium text-sm md:text-base">About us</span>
+          </div>
+
+          {/* Main Content Card Container */}
+          <div className="relative bg-[#f5f5f5] rounded-3xl p-12 md:p-20 text-slate-900 min-h-70 flex items-center justify-center">
+            {/* Main Typography content */}
+            <div className="max-w-3xl text-center">
+              <p className="text-base md:text-xl font-medium leading-relaxed tracking-wide text-neutral-800">
+                X3 is a veteran-owned construction and engineering firm in the telecommunications
+                industry since 2005. Headquartered in Escondido California, servicing much of the
+                Southwest.
+              </p>
+            </div>
+
+            {/* Bottom Right Corner Action Button */}
+            <Link
+              to="/contact"
+              className="absolute right-2 md:bottom-1 md: bg-black text-white p-4 rounded-2xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group"
+            >
+              <FaArrowUp className="w-5 h-5 rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
           </div>
         </div>
       </section>
