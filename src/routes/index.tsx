@@ -202,9 +202,9 @@ function Home() {
               </div>
 
               {/* Bottom Right Arrow Button */}
-              <div className="absolute bottom-0 right-0 w-14 h-14 sm:w-18 sm:h-18 bg-white rounded-tl-[27px] flex items-end justify-end p-0.5">
-                <button className="bg-black text-white p-2.5 rounded-xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group flex items-center justify-center">
-                  <FaArrowUp className="w-7 h-7 rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <div className="absolute bottom-0 right-2 bottom-1 w-14 h-14 sm:w-18 sm:h-18 bg-white rounded-tl-[27px] flex items-end justify-end p-0.5">
+                <button className="bg-black text-white p-2.5 h-12 w-12 rounded-md hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group flex items-center justify-center">
+                  <FaArrowUp className="rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
               </div>
             </div>
@@ -280,8 +280,8 @@ function Home() {
 
             {/* Bottom Right Round Action Button */}
             <div className="absolute bottom-0 right-0 w-14 h-14 sm:w-18 sm:h-18 bg-white rounded-tl-[35px] flex items-end justify-end p-0.5">
-              <button className="bg-black text-white p-2.5 rounded-xl hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group flex items-center justify-center">
-                <FaArrowUp className="w-7 h-7 rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <button className="bg-black text-white p-2.5 h-12 w-12 rounded-md hover:bg-neutral-800 transition-all duration-300 transform hover:scale-105 shadow-md group flex items-center justify-center">
+                <FaArrowUp className="rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </button>
             </div>
           </div>
