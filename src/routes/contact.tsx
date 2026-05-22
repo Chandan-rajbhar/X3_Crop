@@ -18,7 +18,6 @@ export const Route = createFileRoute("/contact")({
 });
 
 function Contact() {
-  const [sent, setSent] = useState(false);
   return (
     <>
       <section className="w-full bg-[#f5f5f5] overflow-hidden">

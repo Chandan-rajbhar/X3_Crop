@@ -12,9 +12,9 @@ const links = [
 ] as const;
 
 const servicesMenu = [
-  { title: "Project Management", to: "/services/project-management" },
-  { title: "Construction Services", to: "/services/construction-services" },
-  { title: "RF Services", to: "/services/rf-services" },
+  { title: "Project Management", to: "/ProjectManagement" },
+  { title: "Construction Services", to: "/ConstructionServices" },
+  { title: "RF Services", to: "/Rf-Services" },
 ] as const;
 
 export function Navbar() {
