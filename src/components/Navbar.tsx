@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import logo from "../../public/images/HomePage _img/logo.png";
+import { MdArrowDropDown } from "react-icons/md";
 
 const links = [
   { to: "/", label: "Home" },
@@ -34,9 +35,10 @@ export function Navbar() {
               return (
                 <li className="group relative" key={l.to}>
                   <button
-                    className="text-sm font-medium text-gray-600 hover:text-[#ff5a4a] transition-colors cursor-pointer"
+                    className="flex justify-center justify-items-center text-sm font-medium text-gray-600 hover:text-[#ff5a4a] transition-colors cursor-pointer"
                   >
                     {l.label}
+                    <span><MdArrowDropDown size={20}/></span>
                   </button>
 
                   <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 absolute left-0 top-full z-40 mt-6 min-w-50 rounded-md border border-gray-200 bg-white p-4 shadow-xl">
