@@ -8,11 +8,11 @@ import researchImg from "@/assets/research.jpg";
 export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
-      { title: "Products — X3 Crop" },
-      { name: "description", content: "Premium crops and seed varieties grown sustainably by X3 Crop." },
+      { title: "Careers — X3 Crop" },
+      { name: "description", content: "Join our team and help us grow the future of sustainable agriculture." },
     ],
   }),
-  component: Products,
+  component: Careers,
 });
 
 const products = [
@@ -22,10 +22,10 @@ const products = [
   { img: researchImg, name: "Seedling Trays", tag: "Starter", desc: "Lab-validated seedlings ready for transplant to your fields." },
 ];
 
-function Products() {
+function Careers() {
   return (
     <>
-      <PageHero title="Our Products" subtitle="Honest crops, carefully grown and rigorously tested." image={cornImg} />
+      <PageHero title="Careers" subtitle="Join our team and help us grow the future of sustainable agriculture." image={cornImg} />
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p, i) => (
