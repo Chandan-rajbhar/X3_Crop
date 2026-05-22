@@ -18,7 +18,7 @@ export function Footer() {
               className="w-24 md:w-28 object-contain"
             />
 
-            <p className="mt-6 text-[13px] leading-6 text-gray-300 max-w-[240px]">
+            <p className="mt-6 text-[13px] leading-6 text-gray-300 max-w-60">
               Building the future with excellence
               <br />
               with Construction & Engineering.
@@ -110,7 +110,7 @@ export function Footer() {
     </div>
 
     {/* Floating Social Box */}
-    <div className="absolute -bottom-0 right-0 bg-black px-4 py-2 rounded-2xl flex items-center gap-3 shadow-xl">
+    <div className="absolute bottom-0 right-0 bg-black px-4 py-2 rounded-2xl flex items-center gap-3 shadow-xl">
       {/* YouTube */}
       <a
         href="#youtube"

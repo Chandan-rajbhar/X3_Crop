@@ -24,11 +24,11 @@ function About() {
       <section className="bg-black text-white w-full px-0 py-0 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
         {/* Left Image Wrapper */}
         <FadeIn className="w-full">
-          <div className="relative h-[180px] sm:h-[240px] lg:h-[300px] w-full overflow-hidden">
+          <div className="relative h-45 sm:h-60 lg:h-75 w-full overflow-hidden">
             <img
               src={josue_isai_ramos}
               alt="Farmer holding harvest"
-              className="absolute inset-0 w-full h-full object-cover shadow-[var(--shadow-lift)]"
+              className="absolute inset-0 w-full h-full object-cover shadow-(--shadow-lift)"
               loading="lazy"
             />
           </div>
@@ -154,10 +154,10 @@ function About() {
       </section>
 
       <section className="w-full bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[180px] lg:min-h-[340px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-45 lg:min-h-85">
           {/* Left Image */}
           <FadeIn delay={0.1}>
-            <div className="relative h-[200px] sm:h-[300px] lg:h-full w-full overflow-hidden">
+            <div className="relative h-50 sm:h-75 lg:h-full w-full overflow-hidden">
               <img
                 src={zoe_richardson}
                 alt="Culture"
@@ -174,7 +174,7 @@ function About() {
                   Culture
                 </h2>
 
-                <div className="w-14 h-[2px] bg-white mx-auto mt-3 mb-4 rounded-full" />
+                <div className="w-14 h-0.5 bg-white mx-auto mt-3 mb-4 rounded-full" />
 
                 <p className="text-xs sm:text-sm leading-6 text-gray-300">
                   As our name implies, we are a management company first. Having served carrier,
@@ -224,7 +224,7 @@ function About() {
             viewport={{ once: true }}
             className="bg-white shadow-xl rounded-3xl p-8 md:p-12 border border-gray-200"
           >
-            <div className="space-y-8 text-gray-700 leading-[2] text-[15px] md:text-[17px]">
+            <div className="space-y-8 text-gray-700 leading-loose text-[15px] md:text-[17px]">
               <p>
                 Following four years of service where David served two tours of duty oversees
                 onboard the USS Okinawa and USS Reid as a Radioman performing teletype repair, he

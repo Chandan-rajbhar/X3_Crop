@@ -5,7 +5,7 @@ import harvestImg from "@/assets/harvest.jpg";
 import aerialImg from "@/assets/aerial-fields.jpg";
 import researchImg from "@/assets/research.jpg";
 
-export const Route = createFileRoute("/products")({
+export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
       { title: "Products — X3 Crop" },

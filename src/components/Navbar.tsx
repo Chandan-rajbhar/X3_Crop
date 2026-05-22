@@ -7,7 +7,7 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
-  { to: "/products", label: "Products" },
+  { to: "/careers", label: "Careers" },
 ] as const;
 
 export function Navbar() {
