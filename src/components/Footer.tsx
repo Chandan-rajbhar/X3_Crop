@@ -49,7 +49,9 @@ export function Footer() {
             </a>
 
             <a
-              href="/careers"
+              href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=456b64aa-c155-4840-99e9-a9ead9d02ac0&ccId=19000101_000001&lang=en_US"
+              target="_blank"
+              rel="noreferrer"
               className="hover:text-white transition-all duration-300"
             >
               Careers

@@ -5,12 +5,22 @@ import { HiMenu, HiX } from "react-icons/hi";
 import logo from "../../public/images/HomePage _img/logo.png";
 import { MdArrowDropDown } from "react-icons/md";
 
-const links = [
+type NavLink = {
+  to: string;
+  label: string;
+  href?: string;
+};
+
+const links: NavLink[] = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
-  { to: "/careers", label: "Careers" },
-] as const;
+  {
+    to: "/careers",
+    label: "Careers",
+    href: "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=456b64aa-c155-4840-99e9-a9ead9d02ac0&ccId=19000101_000001&lang=en_US",
+  },
+];
 
 const servicesMenu = [
   { title: "Project Management", to: "/ProjectManagement" },
@@ -147,16 +157,27 @@ export function Navbar() {
 
             return (
               <li key={l.to}>
-                <Link
-                  to={l.to}
-                  className="text-sm font-medium text-gray-600 hover:text-[#ff5a4a] transition-colors"
-                  activeProps={{
-                    className:
-                      "text-[#ff5a4a] font-semibold",
-                  }}
-                >
-                  {l.label}
-                </Link>
+                {l.href ? (
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm font-medium text-gray-600 hover:text-[#ff5a4a] transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={l.to}
+                    className="text-sm font-medium text-gray-600 hover:text-[#ff5a4a] transition-colors"
+                    activeProps={{
+                      className:
+                        "text-[#ff5a4a] font-semibold",
+                    }}
+                  >
+                    {l.label}
+                  </Link>
+                )}
               </li>
             );
           })}
@@ -211,13 +232,25 @@ export function Navbar() {
               {links.map((l) =>
                 l.to !== "/services" ? (
                   <li key={l.to}>
-                    <Link
-                      to={l.to}
-                      onClick={() => setOpen(false)}
-                      className="text-base font-medium text-gray-700 hover:text-[#ff5a4a]"
-                    >
-                      {l.label}
-                    </Link>
+                    {l.href ? (
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={() => setOpen(false)}
+                        className="text-base font-medium text-gray-700 hover:text-[#ff5a4a]"
+                      >
+                        {l.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={l.to}
+                        onClick={() => setOpen(false)}
+                        className="text-base font-medium text-gray-700 hover:text-[#ff5a4a]"
+                      >
+                        {l.label}
+                      </Link>
+                    )}
                   </li>
                 ) : null
               )}
